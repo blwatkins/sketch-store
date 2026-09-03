@@ -28,14 +28,14 @@ minima:
       icon: envelope
       icon_pack: regular
       url: "https://brittniwatkins.beehiiv.com/"
-    - title: "@blwatkins/template"
+    - title: "@blwatkins/sketch-store"
       icon: npm
       icon_pack: brands
-      url: "#"
+      url: "https://www.npmjs.com/package/@blwatkins/sketch-store"
     - title: "Source Code"
       icon: git-alt
       icon_pack: brands
-      url: "https://github.com/blwatkins/npm-typescript-package-template"
+      url: "https://github.com/blwatkins/sketch-store"
     - title: GitHub
       icon: github
       icon_pack: brands
@@ -55,9 +55,10 @@ minima:
   nav_pages:
     - index.md
     - releases.md
+    - roadmap.md
 
-title: "npm TypeScript Package Template"
-description: "A template project for creating a TypeScript package for npm."
+title: "Sketch Store"
+description: "A toolkit for creating and validating sketch objects."
 show_downloads: true
 
 sass:
