@@ -1,0 +1,71 @@
+# Minima theme configuration
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-coffeescript
+  - jekyll-default-layout
+  - jekyll-feed
+  - jekyll-gfm-admonitions
+  - jekyll-github-metadata
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
+  - jekyll-remote-theme
+  - jekyll-seo-tag
+  - jekyll-titles-from-headings
+  - jekyll-toc
+
+# valid social icon names can be found at https://fontawesome.com/search?ic=brands
+
+minima:
+  skin: auto
+  hide_site_feed_link: true
+  show_excerpts: false
+  social_links:
+    - title: "GitHub Pages Home"
+      icon: house
+      icon_pack: regular
+      url: "https://blwatkins.github.io/"
+    - title: "Beehiiv Newsletter"
+      icon: envelope
+      icon_pack: regular
+      url: "https://brittniwatkins.beehiiv.com/"
+    - title: "@blwatkins/template"
+      icon: npm
+      icon_pack: brands
+      url: "#"
+    - title: "Source Code"
+      icon: git-alt
+      icon_pack: brands
+      url: "https://github.com/blwatkins/npm-typescript-package-template"
+    - title: GitHub
+      icon: github
+      icon_pack: brands
+      url: "https://github.com/blwatkins"
+    - title: YouTube
+      icon: youtube
+      icon_pack: brands
+      url: "https://www.youtube.com/channel/UCeJ-huUU2AWP0z4-HWr1BXQ"
+    - title: LinkedIn
+      icon: linkedin
+      icon_pack: brands
+      url: "https://www.linkedin.com/in/brittni-watkins/"
+    - title: Ko-fi
+      icon: ko-fi
+      icon_pack: brands
+      url: "https://ko-fi.com/brittniwatkins"
+  nav_pages:
+    - index.md
+    - releases.md
+
+title: "npm TypeScript Package Template"
+description: "A template project for creating a TypeScript package for npm."
+show_downloads: true
+
+sass:
+  quiet_deps: true
+  silence_deprecations: ["import"]
+
+exclude:
+  - .ruby-version
+  - Gemfile
+  - Gemfile.lock
+  - vendor
