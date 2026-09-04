@@ -6,7 +6,6 @@
   },
 
   "entryPoints": [
-    "./src/hello-world/index.ts"
   ],
 
   "out": "./_doc",
