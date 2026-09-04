@@ -1,11 +1,11 @@
-# npm TypeScript Package Template
+# Sketch Store
 
-A template project for creating a TypeScript package for npm.
+A toolkit for creating and validating sketch objects.
 
 ## Documentation
 
-- [Sample Documentation](https://blwatkins.github.io/npm-typescript-package-template/doc/index.html)
-- [Sample Releases](https://blwatkins.github.io/npm-typescript-package-template/releases.html)
+- [Latest Release](https://blwatkins.github.io/sketch-store/doc/index.html)
+- [Documentation by Version Number](https://blwatkins.github.io/sketch-store/releases.html)
 
 ## License
 
@@ -14,57 +14,57 @@ The full text of the license is included with the project source code.
 
 ## Project Status Badges
 
-### [npm](https://www.npmjs.com/package/@blwatkins/template)
+### [npm](https://www.npmjs.com/package/@blwatkins/sketch-store)
 
-![npm License](https://badgen.net/npm/license/@blwatkins/template/alpha)
-![npm Version](https://badgen.net/npm/v/@blwatkins/template)
-![npm @alpha Version](https://badgen.net/npm/v/@blwatkins/template/alpha)
-![npm Types](https://badgen.net/npm/types/@blwatkins/template)
-![npm Node Version](https://badgen.net/npm/node/@blwatkins/template)
-![npm Weekly Downloads](https://badgen.net/npm/dw/@blwatkins/template)
-![npm Total Downloads](https://badgen.net/npm/dt/@blwatkins/template)
-![npm Last Update](https://img.shields.io/npm/last-update/%40blwatkins%2Ftemplate)
-![npm Unpacked Size](https://img.shields.io/npm/unpacked-size/%40blwatkins%2Ftemplate)
+![npm License](https://badgen.net/npm/license/@blwatkins/sketch-store/alpha)
+![npm Version](https://badgen.net/npm/v/@blwatkins/sketch-store)
+![npm @alpha Version](https://badgen.net/npm/v/@blwatkins/sketch-store/alpha)
+![npm Types](https://badgen.net/npm/types/@blwatkins/sketch-store)
+![npm Node Version](https://badgen.net/npm/node/@blwatkins/sketch-store)
+![npm Weekly Downloads](https://badgen.net/npm/dw/@blwatkins/sketch-store)
+![npm Total Downloads](https://badgen.net/npm/dt/@blwatkins/sketch-store)
+![npm Last Update](https://img.shields.io/npm/last-update/%40blwatkins%2Fsketch-store)
+![npm Unpacked Size](https://img.shields.io/npm/unpacked-size/%40blwatkins%2Fsketch-store)
 
-### [Socket](https://socket.dev/npm/package/@blwatkins/template)
+### [Socket](https://socket.dev/npm/package/@blwatkins/sketch-store)
 
-![Socket Score](https://badge.socket.dev/npm/package/@blwatkins/template)
+![Socket Score](https://badge.socket.dev/npm/package/@blwatkins/sketch-store)
 
-### [Bundlephobia](https://bundlephobia.com/package/@blwatkins/template)
+### [Bundlephobia](https://bundlephobia.com/package/@blwatkins/sketch-store)
 
-![Bundlephobia Tree Shaking](https://badgen.net/bundlephobia/tree-shaking/@blwatkins/template)
-![Bundlephobia Dependency Count](https://badgen.net/bundlephobia/dependency-count/@blwatkins/template)
-![Bundlephobia Minified](https://badgen.net/bundlephobia/min/@blwatkins/template)
-![Bundlephobia Minified + gzip](https://badgen.net/bundlephobia/minzip/@blwatkins/template)
+![Bundlephobia Tree Shaking](https://badgen.net/bundlephobia/tree-shaking/@blwatkins/sketch-store)
+![Bundlephobia Dependency Count](https://badgen.net/bundlephobia/dependency-count/@blwatkins/sketch-store)
+![Bundlephobia Minified](https://badgen.net/bundlephobia/min/@blwatkins/sketch-store)
+![Bundlephobia Minified + gzip](https://badgen.net/bundlephobia/minzip/@blwatkins/sketch-store)
 
-### [Package Phobia](https://packagephobia.com/result?p=%40blwatkins%2Ftemplate)
+### [Package Phobia](https://packagephobia.com/result?p=%40blwatkins%2Fsketch-store)
 
-![Package Phobia Install Size](https://badgen.net/packagephobia/install/@blwatkins/template)
-![Package Phobia Publish Size](https://badgen.net/packagephobia/publish/@blwatkins/template)
+![Package Phobia Install Size](https://badgen.net/packagephobia/install/@blwatkins/sketch-store)
+![Package Phobia Publish Size](https://badgen.net/packagephobia/publish/@blwatkins/sketch-store)
 
-### [GitHub](https://github.com/blwatkins/npm-typescript-package-template)
+### [GitHub](https://github.com/blwatkins/sketch-store)
 
-![GitHub License](https://badgen.net/github/license/blwatkins/npm-typescript-package-template)
-![GitHub Dependabot](https://badgen.net/github/dependabot/blwatkins/npm-typescript-package-template)
-![GitHub Latest Release](https://badgen.net/github/release/blwatkins/npm-typescript-package-template)
-![GitHub Releases](https://badgen.net/github/releases/blwatkins/npm-typescript-package-template)
-![GitHub Last Commit](https://badgen.net/github/last-commit/blwatkins/npm-typescript-package-template)
-![GitHub Commits](https://badgen.net/github/commits/blwatkins/npm-typescript-package-template)
-![GitHub Commit Activity](https://img.shields.io/github/commit-activity/y/blwatkins/npm-typescript-package-template)
-![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/blwatkins/npm-typescript-package-template)
-![GitHub Repo Size](https://img.shields.io/github/repo-size/blwatkins/npm-typescript-package-template)
-![GitHub Repo File or Directory Count](https://img.shields.io/github/directory-file-count/blwatkins/npm-typescript-package-template)
-![GitHub Language Count](https://img.shields.io/github/languages/count/blwatkins/npm-typescript-package-template)
+![GitHub License](https://badgen.net/github/license/blwatkins/sketch-store)
+![GitHub Dependabot](https://badgen.net/github/dependabot/blwatkins/sketch-store)
+![GitHub Latest Release](https://badgen.net/github/release/blwatkins/sketch-store)
+![GitHub Releases](https://badgen.net/github/releases/blwatkins/sketch-store)
+![GitHub Last Commit](https://badgen.net/github/last-commit/blwatkins/sketch-store)
+![GitHub Commits](https://badgen.net/github/commits/blwatkins/sketch-store)
+![GitHub Commit Activity](https://img.shields.io/github/commit-activity/y/blwatkins/sketch-store)
+![GitHub Code Size in Bytes](https://img.shields.io/github/languages/code-size/blwatkins/sketch-store)
+![GitHub Repo Size](https://img.shields.io/github/repo-size/blwatkins/sketch-store)
+![GitHub Repo File or Directory Count](https://img.shields.io/github/directory-file-count/blwatkins/sketch-store)
+![GitHub Language Count](https://img.shields.io/github/languages/count/blwatkins/sketch-store)
 
 ### GitHub Actions
 
-![CodeQL](https://github.com/blwatkins/npm-typescript-package-template/actions/workflows/codeql.yml/badge.svg)
-![npm Validate](https://github.com/blwatkins/npm-typescript-package-template/actions/workflows/npm-validate.yml/badge.svg)
-![Deploy GitHub Pages with Jekyll](https://github.com/blwatkins/npm-typescript-package-template/actions/workflows/gh-pages-jekyll.yml/badge.svg)
+![CodeQL](https://github.com/blwatkins/sketch-store/actions/workflows/codeql.yml/badge.svg)
+![npm Validate](https://github.com/blwatkins/sketch-store/actions/workflows/npm-validate.yml/badge.svg)
+![Deploy GitHub Pages with Jekyll](https://github.com/blwatkins/sketch-store/actions/workflows/gh-pages-jekyll.yml/badge.svg)
 
 ## Sources and Technical Notes
 
-- [Resources and References](https://blwatkins.github.io/npm-typescript-package-template/resources-and-references.html)
+- [Resources and References](https://blwatkins.github.io/sketch-store/resources-and-references.html)
 
 ## Thank Yous
 
@@ -72,6 +72,9 @@ A huge thank you to all the open source contributors who have made this project 
 
 A special thank you to all the educators, mentors, and content creators who have shared their knowledge and expertise in the fields of algorithmic art, web development, and computer science.
 Thank you for giving me the tools, resources, opportunities, support, and inspiration to learn and grow as a developer.
+
+An extra thank you to [The Processing Foundation](https://processingfoundation.org/) and all the developers and contributors who have made [Processing](https://processing.org/) and [p5.js](https://p5js.org/) what they are today.
+This project would not exist without you.
 
 ----
 

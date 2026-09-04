@@ -6,7 +6,6 @@
   },
 
   "entryPoints": [
-    "./src/hello-world/index.ts"
   ],
 
   "out": "./_doc",
@@ -14,7 +13,7 @@
   "includeVersion": true,
 
   "navigationLinks": {
-    "TypeScript Template": "https://blwatkins.github.io/npm-typescript-package-template/",
+    "Sketch Store": "https://blwatkins.github.io/sketch-store/",
     "Brittni Watkins": "https://blwatkins.github.io/"
   },
 

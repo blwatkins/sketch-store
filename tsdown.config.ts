@@ -27,7 +27,7 @@ export default defineConfig({
         index: './src/index.ts'
     },
     outDir: './_dist',
-    globalName: 'blwatkinsTemplate',
+    globalName: 'blwatkinsSketchStore',
     sourcemap: false,
     clean: true,
     dts: true,
