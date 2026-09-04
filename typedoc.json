@@ -6,6 +6,7 @@
   },
 
   "entryPoints": [
+    "./src/series/index.ts"
   ],
 
   "out": "./_doc",

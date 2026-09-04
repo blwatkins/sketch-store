@@ -20,4 +20,10 @@
  * SPDX-License-Identifier: MIT
  */
 
-export * from './series';
+import { Type, Static } from 'typebox';
+
+export const seriesSchema = Type.Object({
+
+});
+
+export type Series = Static<typeof seriesSchema>;
