@@ -22,8 +22,32 @@
 
 import { Type, Static } from 'typebox';
 
-export const seriesSchema = Type.Object({
+import { StringUtility } from '@blwatkins/utils';
 
-});
+import { entitySchema } from '../entity';
+import { tagsArraySchema } from '../tag';
+
+export const seriesSchema = Type.Intersect([
+    entitySchema,
+    Type.Object(
+        {
+            name: Type.Readonly(
+                Type.String({
+                    pattern: StringUtility.singleLineTrimmedPattern,
+                    maxLength: 128
+                })
+            ),
+
+            isActive: Type.Readonly(
+                Type.Boolean()
+            ),
+
+            tags: Type.Readonly(
+                Type.Optional(tagsArraySchema)
+            )
+        },
+        { additionalProperties: false }
+    )
+]);
 
 export type Series = Static<typeof seriesSchema>;
