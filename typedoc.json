@@ -6,7 +6,9 @@
   },
 
   "entryPoints": [
-    "./src/series/index.ts"
+    "./src/entity/index.ts",
+    "./src/series/index.ts",
+    "./src/tag/index.ts"
   ],
 
   "out": "./_doc",
