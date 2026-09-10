@@ -48,20 +48,24 @@
     "prepack": "npm run build",
     "validate": "npm run lint:all && npm run docs && npm run build && npm test"
   },
+  "dependencies": {
+    "@blwatkins/utils": "^0.1.0-alpha.3",
+    "typebox": "^1.3.30"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@stylistic/eslint-plugin": "^5.10.0",
-    "@types/node": "^26.4.1",
+    "@types/node": "^26.5.1",
     "@vitest/coverage-v8": "^5.0.0",
     "@vitest/ui": "^5.0.0",
-    "eslint": "^10.9.1",
+    "eslint": "^10.10.0",
     "eslint-plugin-es-x": "^10.0.0",
-    "eslint-plugin-jsdoc": "^64.3.4",
+    "eslint-plugin-jsdoc": "^64.3.9",
     "globals": "^17.12.0",
     "tsdown": "^0.23.0",
     "typedoc": "^0.28.19",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.69.0",
+    "typescript-eslint": "^8.70.0",
     "vitest": "^5.0.0"
   },
   "keywords": [
@@ -73,9 +77,5 @@
     "esm",
     "sketch",
     "store"
-  ],
-  "dependencies": {
-    "@blwatkins/utils": "^0.1.0-alpha.3",
-    "typebox": "^1.3.25"
-  }
+  ]
 }
