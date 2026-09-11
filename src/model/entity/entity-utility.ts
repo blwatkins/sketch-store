@@ -20,51 +20,28 @@
  * SPDX-License-Identifier: MIT
  */
 
-import { NumberUtility, StringUtility } from '@blwatkins/utils';
+import Value from 'typebox/value';
 
-import { Entity } from './entity';
+import { SchemaTypeError, StaticInstanceError, StringUtility } from '@blwatkins/utils';
 
-export abstract class EntityBuilder {
-    #id: number = 0;
-    #uuid: string = '';
-    #isHidden: boolean = false;
-    #description: string | undefined = undefined;
+import { Entity, entitySchema } from './entity';
 
-    protected constructor() {}
-
-    public setId(id: number): this {
-        NumberUtility.assertPositiveInteger(id);
-        this.#id = id;
-        return this;
+export class EntityUtility {
+    private constructor() {
+        throw new StaticInstanceError('EntityUtility is a static class and cannot be instantiated.');
     }
 
-    public setUUID(uuid: string): this {
-        StringUtility.assertSingleLineTrimmedString(uuid);
-        this.#uuid = uuid;
-        return this;
-    }
+    public static assertEntity(input: unknown, message?: string): asserts input is Entity {
+        if (!EntityUtility.isEntity(input)) {
+            if (StringUtility.isSingleLineTrimmedString(message)) {
+                throw new SchemaTypeError(message);
+            }
 
-    public setHidden(isHidden: boolean): this {
-        // TODO - assert boolean type
-        this.#isHidden = isHidden;
-        return this;
-    }
-
-    public setDescription(description: string | undefined): this {
-        if (description !== undefined) {
-            StringUtility.assertStringType(description);
+            throw new SchemaTypeError('Input does not match schema requirements for Entity.');
         }
-
-        this.#description = description;
-        return this;
     }
 
-    protected build(): Entity {
-        return {
-            id: this.#id,
-            uuid: this.#uuid,
-            isHidden: this.#isHidden,
-            description: this.#description,
-        };
+    public static isEntity(input: unknown): input is Entity {
+        return Value.Check(entitySchema, input);
     }
 }

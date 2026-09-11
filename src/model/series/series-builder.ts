@@ -57,7 +57,7 @@ export class SeriesBuilder extends EntityBuilder {
         });
 
         if (!allSingleLine) {
-            throw new PrimitiveTypeError('All tags must be a single line string.')
+            throw new PrimitiveTypeError('All tags must be a single line string.');
         }
 
         if (this.#tags === undefined) this.#tags = [];
@@ -71,7 +71,7 @@ export class SeriesBuilder extends EntityBuilder {
             name: this.#name,
             isActive: this.#isActive,
             tags: this.#tags
-        }
+        };
         SeriesUtility.assertSeries(series);
         return series;
     }

@@ -20,28 +20,49 @@
  * SPDX-License-Identifier: MIT
  */
 
-import Value from 'typebox/value';
+import { NumberUtility, StringUtility } from '@blwatkins/utils';
 
-import { SchemaTypeError, StaticInstanceError, StringUtility } from '@blwatkins/utils';
+import { Entity } from './entity';
 
-import { Series, seriesSchema } from './series';
+export abstract class EntityBuilder {
+    #id: number = 0;
+    #uuid: string = '';
+    #isHidden: boolean = false;
+    #description: string | undefined = undefined;
 
-export class SeriesUtility {
-    private constructor() {
-        throw new StaticInstanceError('SeriesUtility is a static class and cannot be instantiated.')
+    public setId(id: number): this {
+        NumberUtility.assertPositiveInteger(id);
+        this.#id = id;
+        return this;
     }
 
-    public static assertSeries(input: unknown, message?: string): asserts input is Series {
-        if (!SeriesUtility.isSeries(input)) {
-            if (StringUtility.isSingleLineTrimmedString(message)) {
-                throw new SchemaTypeError(message);
-            }
+    public setUUID(uuid: string): this {
+        StringUtility.assertSingleLineTrimmedString(uuid);
+        this.#uuid = uuid;
+        return this;
+    }
 
-            throw new SchemaTypeError('Input does not match schema requirements for Series.')
+    public setHidden(isHidden: boolean): this {
+        // TODO - assert boolean type
+        this.#isHidden = isHidden;
+        return this;
+    }
+
+    public setDescription(description: string | undefined): this {
+        if (description !== undefined) {
+            StringUtility.assertStringType(description);
         }
+
+        this.#description = description;
+        return this;
     }
 
-    public static isSeries(input: unknown): input is Series {
-        return Value.Check(seriesSchema, input);
+    protected build(): Entity {
+        return {
+            id: this.#id,
+            uuid: this.#uuid,
+            isHidden: this.#isHidden,
+            description: this.#description
+        };
     }
 }
