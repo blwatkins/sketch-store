@@ -20,6 +20,5 @@
  * SPDX-License-Identifier: MIT
  */
 
-export * from './entity';
-export * from './series';
-export * from './tag';
+export * from './controller';
+export * from './model';
