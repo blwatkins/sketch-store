@@ -20,6 +20,28 @@
  * SPDX-License-Identifier: MIT
  */
 
-export * from './tag';
-export * from './tag-builder';
-export * from './tag-utility';
+import Value from 'typebox/value';
+
+import { SchemaTypeError, StaticInstanceError, StringUtility } from '@blwatkins/utils';
+
+import { Tag, tagSchema } from './tag';
+
+export class TagUtility {
+    private constructor() {
+        throw new StaticInstanceError('TagUtility is a static class and cannot be instantiated.')
+    }
+
+    public static assertTag(input: unknown, message?: string): asserts input is Tag {
+        if (!TagUtility.isTag(input)) {
+            if (StringUtility.isSingleLineTrimmedString(message)) {
+                throw new SchemaTypeError(message);
+            }
+
+            throw new SchemaTypeError('Input does not match schema requirements for Tag.')
+        }
+    }
+
+    public static isTag(input: unknown): input is Tag {
+        return Value.Check(tagSchema, input);
+    }
+}

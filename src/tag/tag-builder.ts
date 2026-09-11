@@ -20,6 +20,28 @@
  * SPDX-License-Identifier: MIT
  */
 
-export * from './tag';
-export * from './tag-builder';
-export * from './tag-utility';
+import { StringUtility } from '@blwatkins/utils';
+
+import { EntityBuilder } from '../entity';
+
+import { Tag } from './tag';
+import { TagUtility } from './tag-utility';
+
+export class TagBuilder extends EntityBuilder {
+    #name: string = '';
+
+    public setName(name: string): this {
+        StringUtility.assertSingleLineTrimmedString(name);
+        this.#name = name;
+        return this;
+    }
+
+    public override build(): Tag {
+        const tag: Tag = {
+            ...super.build(),
+            name: this.#name
+        };
+        TagUtility.assertTag(tag);
+        return tag;
+    }
+}
