@@ -6,9 +6,10 @@
   },
 
   "entryPoints": [
-    "./src/entity/index.ts",
-    "./src/series/index.ts",
-    "./src/tag/index.ts"
+    "./src/controller/entity-request/index.ts",
+    "./src/model/entity/index.ts",
+    "./src/model/series/index.ts",
+    "./src/model/tag/index.ts"
   ],
 
   "out": "./_doc",
