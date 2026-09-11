@@ -20,6 +20,28 @@
  * SPDX-License-Identifier: MIT
  */
 
-export * from './series';
-export * from './series-builder';
-export * from './series-utility';
+import Value from 'typebox/value';
+
+import { SchemaTypeError, StaticInstanceError, StringUtility } from '@blwatkins/utils';
+
+import { Series, seriesSchema } from './series';
+
+export class SeriesUtility {
+    private constructor() {
+        throw new StaticInstanceError('SeriesUtility is a static class and cannot be instantiated.')
+    }
+
+    public static assertSeries(input: unknown, message?: string): asserts input is Series {
+        if (!SeriesUtility.isSeries(input)) {
+            if (StringUtility.isSingleLineTrimmedString(message)) {
+                throw new SchemaTypeError(message);
+            }
+
+            throw new SchemaTypeError('Input does not match schema requirements for Series.')
+        }
+    }
+
+    public static isSeries(input: unknown): input is Series {
+        return Value.Check(seriesSchema, input);
+    }
+}
