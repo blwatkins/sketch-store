@@ -37,16 +37,16 @@ export const entitySchema = Type.Object({
         })
     ),
 
+    isHidden: Type.Readonly(
+        Type.Boolean()
+    ),
+
     description: Type.Readonly(
         Type.Optional(
             Type.String({
                 maxLength: maxDescriptionLength
             })
         )
-    ),
-
-    isHidden: Type.Readonly(
-        Type.Boolean()
     )
 });
 

@@ -20,6 +20,28 @@
  * SPDX-License-Identifier: MIT
  */
 
-export * from './entity';
-export * from './entity-builder';
-export * from './entity-utility';
+import Value from 'typebox/value';
+
+import { SchemaTypeError, StaticInstanceError, StringUtility } from '@blwatkins/utils';
+
+import { Entity, entitySchema } from './entity';
+
+export class EntityUtility {
+    private constructor() {
+        throw new StaticInstanceError('EntityUtility is a static class and cannot be instantiated.')
+    }
+
+    public static assertEntity(input: unknown, message?: string): asserts input is Entity {
+        if (!EntityUtility.isEntity(input)) {
+            if (StringUtility.isSingleLineTrimmedString(message)) {
+                throw new SchemaTypeError(message);
+            }
+
+            throw new SchemaTypeError('Input does not match schema requirements for Entity.')
+        }
+    }
+
+    public static isEntity(input: unknown): input is Entity {
+        return Value.Check(entitySchema, input);
+    }
+}
